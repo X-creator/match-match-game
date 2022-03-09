@@ -1,0 +1,182 @@
+@import "../../shared/vars";
+
+.overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.register {
+    position: relative;
+    padding: 21px 19px 26px 21px;
+    width: 640px;
+    height: 460px;
+    background-color: $main-bgColor;
+}
+
+.register__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: 53px;
+}
+
+.register__form {
+    display: flex;
+    align-items: center;
+}
+
+.register__form-wrapper {
+    margin-right: 40px;
+}
+
+.register__form-field {
+    position: relative;
+    width: 328px;
+    margin-bottom: 16px;
+}
+
+.register__form-input {
+    border-radius: 4px 4px 0 0;
+    width: 100%;
+    background: rgba(33, 33, 33, 0.08);
+    height: 56px;
+    padding: 22px 60px 10px 26px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.register__form-label {
+    position: absolute;
+    pointer-events: none;
+    left: 20px;
+    top: 18px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.7);
+    transition: 0.2s ease;
+}
+
+.register__form-check {
+    position: absolute;
+    background: url("../../assets/icons/check.svg") rgba(1, 135, 134, 0.08) center / 18px no-repeat;
+    right: 8px;
+    border-radius: 50%;
+    top: 8px;
+    width: 40px;
+    height: 40px;
+    transition: 0.2s;
+    opacity: 0;
+}
+
+.register__form-input.valid ~ .register__form-check {
+    opacity: 1;
+}
+
+.register__form-input.valid
+.register__form-input:focus {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.register__form-input.invalid {
+    border: 1px solid red;
+}
+
+.register__form-input.invalid + .register__form-label,
+.register__form-input.valid + .register__form-label,
+.register__form-input:focus + .register__form-label {
+    top: 8px;
+    left: 26px;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.register__avatar-label {
+    transform: scale(0.7);
+    transition: 0.2s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    background: url("../../assets/icons/avatar.svg") center / cover no-repeat;
+}
+
+.register__form.valid .register__avatar-label {
+    transform: scale(1);
+}
+
+.register__avatar-label:hover {
+    opacity: 0.5;
+}
+
+.register__avatar-text {
+    position: relative;
+    top: -10px;
+    font-size: 14px;
+    letter-spacing: 0.4px;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.register__btn-wrapper {
+    position: absolute;
+    bottom: 26px;
+    right: 20px;
+}
+
+.register__btn-add,
+.register__btn-cancel {
+    padding: 10px 16px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    transition: 0.2s;
+}
+
+.register__btn-add {
+    background-color: $base-color;
+    color: $main-bgColor;
+}
+
+.register__btn-cancel {
+    background: #e3f2fd;
+    color: $base-color;
+    margin-left: 17px;
+}
+
+.register__btn-add:hover,
+.register__btn-cancel:hover {
+    opacity: 0.7;
+}
+
+.register__btn-add:active,
+.register__btn-cancel:active {
+    transform: scale(0.95);
+}
+
+.error-message {
+    line-height: 2;
+    position: absolute;
+    bottom: 40px;
+    left: 22px;
+    width: 370px;
+    color: #8f4e76;
+}

@@ -1,0 +1,78 @@
+@import "../../../shared/vars";
+
+.how-to {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: clamp(10px, 3.5vh, 33px);
+    padding-left: 36px;
+    padding-right: 184px;
+    padding-top: min(calc(4vh - 10px), 28px);
+    padding-bottom: min(1.5vh, 85px);
+    height: clamp(560px, calc(100vh - 111px), 860px);
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+
+.how-to__main-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+    margin-bottom: clamp(10px, calc(3vh - 9px), 20px);
+}
+
+.how-to__register,
+.how-to__configure,
+.how-to__play {
+    display: flex;
+    justify-content: space-between;
+}
+
+.how-to__register-wrapper,
+.how-to__configure-wrapper,
+.how-to__play-wrapper {
+    padding: 16px 16px 16px 72px;
+    width: 360px;
+    background-color: $main-bgColor;
+}
+
+.how-to__title {
+    color: rgba(0, 0, 0, 0.6);
+    letter-spacing: 0.25px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    position: relative;
+}
+
+.how-to__title::before {
+    left: -56px;
+    position: absolute;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $base-color;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2), 0 3px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.14);
+    content: attr(data-num);
+    font-size: 24px;
+    line-height: 21px;
+    color: $main-bgColor;
+}
+
+.how-to__register-img {
+    height: min(30vh, 218px);
+}
+
+.how-to__configure {
+    margin-top: min(1vh, 16px);
+    margin-bottom: min(1.5vh, 21px);
+}
+
+.how-to__play-img {
+    height: min(30vh, 240px);
+}

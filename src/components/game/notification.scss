@@ -1,0 +1,39 @@
+.notification {
+    z-index: 100;
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 200px;
+    background-color: #171515bf;
+    border-radius: 17px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-message {
+    font-size: 32px;
+    color: #f1e410;
+}
+
+.game-btn {
+    letter-spacing: 2px;
+    font-weight: 500;
+    display: flex;
+    border-radius: 4px;
+    top: 30px;
+    position: relative;
+    width: 75px;
+    height: 40px;
+    background: #2196F3;
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    font-size: 24px;
+}
+
+.game-btn:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,125 @@
+@import "../../../shared/vars";
+
+.settings {
+    box-shadow: 0 6px 5px rgba(0, 0, 0, 0.24), 0 9px 18px rgba(0, 0, 0, 0.18);
+    background-color: $main-bgColor;
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto auto;
+    width: 1000px;
+    border-radius: 5px;
+    padding: 32px 70px 32px 46px;
+}
+
+.cards-type, .game-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+}
+
+.cards-type__title,
+.game-type__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.15px;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.cards-type__text,
+.game-type__text {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.25px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.card-item,
+.game-item {
+    opacity: 0.30;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-item.active,
+.game-item.active {
+    opacity: 1;
+}
+
+.card-item.active::before {
+    content: '';
+    background: url("../../../assets/icons/arrow.svg") no-repeat center/cover;
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    top: -34px;
+    left: calc(50% - 17px);
+    transform: rotate(135deg);
+    animation: bounce 1.4s infinite cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(-10px) rotate(135deg);
+    }
+}
+
+.cards-type__select,
+.game-type__select {
+    display: flex;
+    width: 280px;
+    justify-content: space-between;
+}
+
+.cards-type__item-1 {
+    background: url("../../../assets/icons/foods.svg") no-repeat center/cover;
+    width: 50px;
+    height: 50px;
+}
+
+.cards-type__item-2 {
+    background: url("../../../assets/icons/animals.svg") no-repeat center/cover;
+    width: 55px;
+    height: 55px;
+}
+
+.cards-type__item-3 {
+    background: url("../../../assets/icons/vehicles.svg") no-repeat center/cover;
+    width: 57px;
+    height: 57px;
+}
+
+.game-item {
+    width: 48px;
+    height: 75px;
+    bottom: 23px;
+}
+
+.game-type__item-1 {
+    background: url("../../../assets/icons/junior.svg") no-repeat center/cover;
+}
+
+.game-type__item-2 {
+    background: url("../../../assets/icons/middle.svg") no-repeat center/cover;
+}
+
+.game-type__item-3 {
+    background: url("../../../assets/icons/senior.svg") no-repeat center/cover;
+}
+
+.game-item__text {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+}
+
+.game-item__text:first-letter {
+    font-size: 23px;
+    color: #673ab7;
+}
+
+.game-item.active .game-item__text:first-letter {
+    font-weight: 500;
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "category": "animals",
+    "imgAmount": 64
+  },
+  {
+    "category": "foods",
+    "imgAmount": 22
+  },
+  {
+    "category": "vehicles",
+    "imgAmount": 25
+  }
+]
